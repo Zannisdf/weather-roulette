@@ -2,5 +2,8 @@
   <div class="col-3"><%= player.name %></div>
   <div class="col-3"><%= player.email %></div>
   <div class="col-3"><%= player.wallet %></div>
-  <div class="col-3"><%= link_to "Edit", edit_player_path(player), class: 'btn btn-info btn-sm editPlayer', data: { remote: true } %></div>
+  <div class="col-3">
+    <%= link_to "Edit", edit_player_path(player), class: 'btn btn-info btn-sm editPlayer', data: { remote: true } %>
+    <%= link_to "Remove", player_path(player), class: 'btn btn-danger btn-sm', data: { remote: true, method: :delete } %>  
+  </div>
 </div>

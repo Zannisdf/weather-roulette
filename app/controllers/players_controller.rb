@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-  before_action :set_player, only: %i[edit update]
+  before_action :set_player, only: %i[edit update destroy]
 
   def index
     @players = Player.all
@@ -29,6 +29,11 @@ class PlayersController < ApplicationController
     else
       redirect_to players_path, alert: 'Please try again.'
     end
+  end
+
+  def destroy
+    @player.destroy
+    respond_to :js
   end
 
   private
