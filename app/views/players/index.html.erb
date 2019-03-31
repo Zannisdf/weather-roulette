@@ -7,7 +7,8 @@
       <th></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="playersTbody">
     <%= render @players %>
   </tbody>
 </table>
+<%= link_to 'New player', new_player_path, id: 'newPlayer', class: 'btn btn-primary btn-sm', data: { remote: true } %>

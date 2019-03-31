@@ -1,0 +1,8 @@
+<tr>
+  <%= form_with(model: player) do |f| %>
+    <td><%= f.text_field :name, autofocus: true %></td>
+    <td><%= f.email_field :email %></td>
+    <td><%= f.number_field :wallet %></td>
+    <td><%= f.submit 'Save', class: 'btn btn-primary btn-sm' %></td>
+  <% end %>
+</tr>
