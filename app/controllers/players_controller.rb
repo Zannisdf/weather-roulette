@@ -2,7 +2,7 @@ class PlayersController < ApplicationController
   before_action :set_player, only: %i[edit update destroy]
 
   def index
-    @players = Player.all
+    @players = Player.order(:created_at)
   end
 
   def new
