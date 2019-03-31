@@ -1,14 +1,13 @@
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Wallet</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody id="playersTbody">
+<div class="playersTable">
+  <div class="playersThead">
+    <div class="row">
+      <div class="col-3">Name</div>
+      <div class="col-3">Email</div>
+      <div class="col-3">Wallet</div>
+    </div>
+  </div>
+  <div id="playersTbody">
     <%= render @players %>
-  </tbody>
-</table>
+  </div>
+</div>
 <%= link_to 'New player', new_player_path, id: 'newPlayer', class: 'btn btn-primary btn-sm', data: { remote: true } %>

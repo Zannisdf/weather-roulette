@@ -1,8 +1,8 @@
-<tr>
-  <%= form_with(model: player) do |f| %>
-    <td><%= f.text_field :name, autofocus: true %></td>
-    <td><%= f.email_field :email %></td>
-    <td><%= f.number_field :wallet %></td>
-    <td><%= f.submit 'Save', class: 'btn btn-primary btn-sm' %></td>
-  <% end %>
-</tr>
+<%= form_with(model: player) do |f| %>
+  <div id="newPlayerForm" class="row">
+    <div class="col-3"><%= f.text_field :name, autofocus: true %></div>
+    <div class="col-3"><%= f.email_field :email %></div>
+    <div class="col-3"><%= f.number_field :wallet %></div>
+    <div class="col-3"><%= f.submit 'Save', class: 'btn btn-primary btn-sm' %></div>
+  </div>
+<% end %>
