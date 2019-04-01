@@ -1,5 +1,6 @@
+# Pick one option considering its weight.
 module Picker
-  def pick_one(odds)
+  def pick_one(odds = { green: 2, red: 49, black: 49 })
     total_odds = odds.values.sum
     picked = rand(0...total_odds)
     current_value = 0

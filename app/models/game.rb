@@ -6,7 +6,7 @@ class Game < ApplicationRecord
   has_many :players, through: :bets
 
   def set_result
-    self.result = pick_one(green: 2, red: 49, black: 49)
+    self.result = pick_one
   end
 
   def new_round

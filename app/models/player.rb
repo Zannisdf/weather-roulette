@@ -13,7 +13,7 @@ class Player < ApplicationRecord
         player: player,
         game: game,
         amount: player.bet_amount,
-        choice: player.pick_one(green: 2, red: 49, black: 49)
+        choice: player.pick_one
       )
     end
   end
