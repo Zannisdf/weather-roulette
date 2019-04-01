@@ -10,7 +10,7 @@ class Game < ApplicationRecord
   end
 
   def new_round
-    Player.place_bet(self)
+    Player.place_bets(self)
   end
 
   enum result: %i[green red black]
