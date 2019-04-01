@@ -25,4 +25,8 @@ class Player < ApplicationRecord
   def bet_range
     0.08..0.15
   end
+
+  def self.daily_bonus(bonus_amount = 10_000)
+    all.each { |player| player.update(wallet: player.wallet + bonus_amount) }
+  end
 end
