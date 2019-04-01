@@ -9,6 +9,8 @@ class Player < ApplicationRecord
 
   def self.place_bets(game)
     all.each do |player|
+      next if player.wallet.zero?
+
       Bet.create(
         player: player,
         game: game,
